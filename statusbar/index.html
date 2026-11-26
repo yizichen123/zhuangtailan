@@ -5305,10 +5305,8 @@ function contraceptionProfileRows(role) {
     try {
       var ageStr = String((raw && raw.年龄) || '').trim();
       var mAge = ageStr.match(/(\d{1,3})/);
-      if ((mAge && Number(mAge[1]) < 18) || String(name || '').trim() === '徐朵朵') return '';
       var api = (window.parent && window.parent.__shnMingqiApi) || window.__shnMingqiApi || null;
       var rec = (api && typeof api.getRecord === 'function' ? api.getRecord(name, raw) : null) || (raw && raw.私密档案 && raw.私密档案.名器);
-      if (!rec || typeof rec !== 'object' || !rec.品质) return '';
       var safeName = escHtml(String(name || ''));
       var revealed = !!rec.已揭示;
       var parts = rec.词条 && typeof rec.词条 === 'object' ? Object.keys(rec.词条) : [];
