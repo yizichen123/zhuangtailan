@@ -12,14 +12,15 @@
 在 SillyTavern 正则 `状态栏美化（亮）` 中使用 `regex/01-状态栏美化（亮）-云端链路版.component.json`（或直接修改脚本内第一行 `VERSION`）：
 
 ```text
-https://gcore.jsdelivr.net/gh/yizichen123/zhuangtailan@v7.5.2/statusbar/index.html
-https://testingcf.jsdelivr.net/gh/yizichen123/zhuangtailan@v7.5.2/statusbar/index.html
+https://gcore.jsdelivr.net/gh/yizichen123/zhuangtailan@v7.5.3/statusbar/index.html
+https://testingcf.jsdelivr.net/gh/yizichen123/zhuangtailan@v7.5.3/statusbar/index.html
 ```
 
-发公告出新版本时，只需修改 `VERSION = 'v7.5.2'` 为新版本号（如 `v7.5.3`）即可。
+发公告出新版本时，只需修改 `VERSION = 'v7.5.3'` 为新版本号（如 `v7.5.4`）即可。
 
 ## 版本历史
 
+- `v7.5.3`（三端版本号统一为 `7.5.3`，对应角色卡《都市神豪之我爱装逼·完整版 V7.5.3》）：将 `SHN_TONGREN_AGE` 中徐朵朵实际与外表年龄同步更新为 `8岁`（保留 `v1.1~v7.5.2` 全部手改与修复）。
 - `v7.5.2`（三端版本号统一为 `7.5.2`，对应角色卡《都市神豪之我爱装逼·完整版 V7.5.2》）：彻底移除状态栏 `contraceptionProfileRows` 中的 `>= 18` 岁展示拦截与 `shnResolveAgePair` 中的 `Math.max(18, ...)` 外表年龄下限锁定，100% 保留 `v1.1~v1.6` 全部修复与功能。
 - `v1.6`（对应角色卡《都市神豪之我爱装逼·完整版 V7.5.1》）：① 为经典与浅色 `.wealth-card` 补齐 `grid-template-columns: minmax(0, 1fr)` 与子行 `min-width: 0`，并在 `fitCashBalance` 与 `applyHudTheme` 同步限制真实可用宽度＋切皮重算，根治浅色模式下大额余额（如 1000 亿）把 `.wealth-card` 撑宽裁切的问题；② 移除 `#shn-theme-40-style` 误带入的 `#render-targets .shn-pfp img { pointer-events: none; }` 拦截并补充容器兜底点击，修复浅色模式下生成的立绘无法点击放大查看的问题。
 - `v1.5`（对应角色卡《都市神豪之我爱装逼·完整版 V7.5》）：配合对 AI 彻底移除「女性/男性角色档案」方案，`boundaryOfCard` 与 `npcMeasurementRows` 改为优先读取当前在场表的 `界线与反感项` / `身高` / `体重`，再用静默后台档案兜底。
